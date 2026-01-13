@@ -5,21 +5,21 @@
 class Al < Formula
   desc "Mac Toolchain Manager - trial/core lifecycle management"
   homepage "https://github.com/kkato1030/al"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/kkato1030/al/releases/download/v0.1.1/al_darwin_amd64.tar.gz"
-      sha256 "73322c349d8e7da8db7da754baab2a327aad4b2cc73ab31d917e130cefb85761"
+      url "https://github.com/kkato1030/al/releases/download/v0.2.0/al_darwin_amd64.tar.gz"
+      sha256 "d7a6fdc3963018ed4b62c88101b30b3431d4b26b106071e9c8b2cb25ffab4622"
 
       def install
         bin.install "al"
       end
     end
     on_arm do
-      url "https://github.com/kkato1030/al/releases/download/v0.1.1/al_darwin_arm64.tar.gz"
-      sha256 "b721cdce0045905d0968ad9c5f8570e5ec9590b4e921759e0fa7567adc6fc12d"
+      url "https://github.com/kkato1030/al/releases/download/v0.2.0/al_darwin_arm64.tar.gz"
+      sha256 "635527d31be65a018382970d4ee6de52dea8bb2fdb58b01fff501aaf4f34c865"
 
       def install
         bin.install "al"
@@ -30,8 +30,8 @@ class Al < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kkato1030/al/releases/download/v0.1.1/al_linux_amd64.tar.gz"
-        sha256 "a275c54af1a080996733edfbfd59ea798da954ba7697bf11c606d981f1cbafe4"
+        url "https://github.com/kkato1030/al/releases/download/v0.2.0/al_linux_amd64.tar.gz"
+        sha256 "4d99c4c1e8d4a272c4258d0e3cf7eeffe724193e1c99f09cde3ac040aff249db"
 
         def install
           bin.install "al"
@@ -40,8 +40,8 @@ class Al < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kkato1030/al/releases/download/v0.1.1/al_linux_arm64.tar.gz"
-        sha256 "88798fd322ccf4c4c568e6f655070c122d8e8d7a41b894b1d7376482f936ee81"
+        url "https://github.com/kkato1030/al/releases/download/v0.2.0/al_linux_arm64.tar.gz"
+        sha256 "def2fecafc0fdd4b5ee51194fbd0bdc679db1f3080759d5dd3bc5e0d20ab9298"
 
         def install
           bin.install "al"
