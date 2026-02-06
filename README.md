@@ -12,16 +12,10 @@ brew tap kkato1030/tap
 
 ### mm
 
-[mm](https://github.com/kecbigmt/mm) - Personal knowledge management CLI tool (PKOS).
-
-**Note:** mm has no stable releases yet. Install the latest from `main` with `--HEAD`:
+[mm](https://github.com/kkato1030/mm) - Personal knowledge management CLI tool (PKOS).
 
 ```bash
-brew install kkato1030/tap/mm --HEAD
+brew install kkato1030/tap/mm
 ```
 
-To upgrade to the latest:
-
-```bash
-brew upgrade mm
-```
+**Note:** Currently only macOS (Apple Silicon) is supported. Other platforms will be added when release binaries are available.

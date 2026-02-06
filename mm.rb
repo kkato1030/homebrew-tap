@@ -3,19 +3,19 @@
 
 class Mm < Formula
   desc "Personal knowledge management CLI tool (PKOS - GTD, Bullet Journal, Zettelkasten)"
-  homepage "https://github.com/kecbigmt/mm"
-  head "https://github.com/kecbigmt/mm.git", branch: "main"
+  homepage "https://github.com/kkato1030/mm"
+  version "0.1.3"
   license "AGPL-3.0"
 
-  depends_on "deno" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/kkato1030/mm/releases/download/v0.1.3/mm-0.1.3-darwin-arm64"
+      sha256 "2348f0c94d0a7fbb6c0f384be4201a70153254a3e7e18320f6853282adeefd4d"
 
-  def install
-    system "deno", "compile",
-      "--config=deno.json",
-      "--allow-read", "--allow-write", "--allow-env", "--allow-run", "--allow-sys",
-      "--output=mm",
-      "src/main.ts"
-    bin.install "mm"
+      def install
+        bin.install "mm-0.1.3-darwin-arm64" => "mm"
+      end
+    end
   end
 
   test do
