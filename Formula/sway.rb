@@ -5,13 +5,13 @@
 class Sway < Formula
   desc "A CLI tool for managing tasks, contexts, and time tracking"
   homepage "https://github.com/kkato1030/sway-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/kkato1030/sway-cli/releases/download/v0.1.1/sway_0.1.1_darwin_arm64.tar.gz"
-    sha256 "fea2e4694c180b51fd33fd309f76cd36d2e5adf545a16be45a4e06afe785ad66"
+    url "https://github.com/kkato1030/sway-cli/releases/download/v0.1.2/sway_0.1.2_darwin_arm64.tar.gz"
+    sha256 "4e392bc57a38697db6a89779e41e797c70a86f5442a0b1dd1834c5654b63b072"
 
     define_method(:install) do
       bin.install "sway"
