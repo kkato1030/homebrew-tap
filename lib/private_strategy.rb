@@ -61,6 +61,7 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
     end
 
     _, @owner, @repo, @filepath = *match
+    @filename = File.basename(@filepath)
   end
 
   def download_url
@@ -70,11 +71,11 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   # Fix for https://github.com/Homebrew/brew/issues/15169
   # Bypass HEAD request that does not contain token
   def resolve_url_basename_time_file_size(url, timeout: nil)
-    [download_url, @filename, Time.now, 0, false]
+    [download_url, resolved_basename, Time.now, 0, false]
   end
 
   def resolved_basename
-    @filename
+    @filename || File.basename(@filepath || url)
   end
 
   private
