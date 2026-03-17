@@ -6,13 +6,13 @@ require_relative "../lib/private_strategy"
 class Sway < Formula
   desc "A CLI tool for managing tasks, contexts, and time tracking"
   homepage "https://github.com/kkato1030/sway-cli"
-  version "0.18.2"
+  version "0.18.1"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/kkato1030/sway-cli/releases/download/v0.18.2/sway_0.18.2_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
-    sha256 "6334d4d16345cfa19dda4b19c11e46338f972ba0aad4c02760905fdcb0526033"
+    url "https://github.com/kkato1030/sway-cli/releases/download/v0.18.1/sway_0.18.1_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+    sha256 "81c6cab97bba2fc107d423e562887064649964f27788f392cb13551f7f6796e5"
 
     define_method(:install) do
       bin.install "sway"
