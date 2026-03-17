@@ -12,7 +12,7 @@ class Sway < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/kkato1030/sway-cli/releases/download/v0.18.2/sway_0.18.2_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
-    sha256 "4997e68c61fa56136285be79507e265c9b6739c4eb3a1c99ba3c7e0e63836925"
+    sha256 "6334d4d16345cfa19dda4b19c11e46338f972ba0aad4c02760905fdcb0526033"
 
     define_method(:install) do
       bin.install "sway"
